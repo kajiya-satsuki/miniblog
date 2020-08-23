@@ -1,4 +1,4 @@
-![mini-blog-logo](https://user-images.githubusercontent.com/26789049/90973847-ca303700-e560-11ea-851a-d17ca7774705.png)
+![mini-blog-logo](https://user-images.githubusercontent.com/26789049/90976226-23ef2c00-e576-11ea-816d-4f2e0f33a727.png)
 
 # mini-blog DB設計
 ## usersテーブル
