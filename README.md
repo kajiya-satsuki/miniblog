@@ -1,25 +1,20 @@
-# README
+![mini-blog-logo](https://user-images.githubusercontent.com/26789049/90976226-23ef2c00-e576-11ea-816d-4f2e0f33a727.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# mini-blog DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|email|string|null: false|
+|password|string|null: false|
+|nickname|string|null: false|
+### Association
+- has_many :tweets
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# miniblog
+## tweetsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null:false|
+|text|text||
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
