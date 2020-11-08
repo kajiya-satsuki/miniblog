@@ -3,10 +3,16 @@
         <div class="header__contents__logo">
             <%= image_tag "mini-blog-logo_paleturquoise.png", width: "375px", height: "90px" %>
         </div>
-        <ul class="nav">
-            <li class="signin">Sign in</li>
-            <li class="signout">Sign out</li>
-            <li class="new"><a href="/tweets/new">New</a></li>
-        </ul>
+        <% if user_signed_in? %>
+            <ul class="nav">
+                <li class="signout"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+                <li class="new"><%= link_to "New", "/tweets/new", class: "post" %></li>
+            </ul>
+        <% else %>
+            <ul class="nav">
+                <li class="signin"><%= link_to "Sign in", new_user_session_path, class: "post" %></li>
+                <li class="signup"><%= link_to "Sign up", new_user_registration_path, class: "post" %></li>
+            </ul>
+        <% end %>
     </div>
 </div>
