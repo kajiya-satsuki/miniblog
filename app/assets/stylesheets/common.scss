@@ -7,7 +7,7 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    background-color: white;
+    background-color: saddlebrown;
     padding: 5px;
     &__contents{
         height: 100px;
@@ -30,8 +30,17 @@
                 display: inline-block;
                 line-height: 30px;
                 text-align: center;
-                color: #41a0a0;
+                color: PaleTurquoise;
                 font-weight: bold;
+                a {
+                    text-decoration: none;
+                    color: PaleTurquoise;
+                  }
+                a:hover {
+                    color: White;
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
             }
         }
     }
