@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div class="contents">
+        <%= form_for(@tweet) do |f|%>
+            <%= f.text_field :title, placeholder: "Title", value: "" %>
+            <%= f.text_area :text, placeholder: "Text" %>
+            <%= f.submit "Post" %>
+        <% end %>
+    </div>
+</div>
