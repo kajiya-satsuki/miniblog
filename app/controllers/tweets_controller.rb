@@ -9,7 +9,7 @@ class TweetsController < ApplicationController
     end
 
     def create
-        @tweet = Tweet.create(tweet_params)
+        @tweet = Tweet.create(title: tweet_params[:title], text: tweet_params[:text], user_id: current_user.id)
         redirect_to :root
     end
 
