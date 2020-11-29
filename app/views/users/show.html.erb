@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <div class="contents">
+        <div class="contents__nickname"><h4><%= @nickname %>さんの投稿一覧</h4></div>
+        <% @tweets.each do |tweet| %>
+            <div class="contents__post">
+            <h3><%= tweet.title %></h3>
+            <p><%= tweet.text %></p>
+            </div>
+        <% end %>
+    </div>
+</div>

@@ -9,6 +9,7 @@
             <ul class="nav">
                 <li class="signout"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
                 <li class="new"><%= link_to "New", "/tweets/new", class: "post" %></li>
+                <li class="mypage"><%= link_to "My page", user_path(current_user.id) %></li>
             </ul>
         <% else %>
             <ul class="nav">
