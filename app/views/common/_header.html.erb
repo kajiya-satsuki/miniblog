@@ -1,14 +1,14 @@
 <div class="header">
     <div class="header__contents">
         <div class="header__contents__logo">
-            <%= link_to "/" do %>
+            <%= link_to root_path do %>
                 <%= image_tag "mini-blog-logo_paleturquoise.png", width: "375px", height: "90px" %>
             <% end %>
         </div>
         <% if user_signed_in? %>
             <ul class="nav">
                 <li class="signout"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-                <li class="new"><%= link_to "New", "/tweets/new", class: "post" %></li>
+                <li class="new"><%= link_to "New", new_tweet_path, class: "post" %></li>
                 <li class="mypage"><%= link_to "My page", user_path(current_user.id) %></li>
             </ul>
         <% else %>
