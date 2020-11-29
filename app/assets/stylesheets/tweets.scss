@@ -22,6 +22,15 @@
         margin-left: 15vw;
         margin-right: 15vw;
         
+        &__nickname{
+            margin-bottom: 20px;
+
+            h4{
+                color: saddlebrown;
+            }
+
+        }
+
         &__post{
             padding: 5px 10px;
             margin-bottom: 40px;
