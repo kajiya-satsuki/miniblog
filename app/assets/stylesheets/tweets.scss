@@ -41,5 +41,34 @@
                 color: #41a0a0;
             }
         }
+
+        .pagination{
+            margin: 50px auto;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+
+            .current{
+                color: saddlebrown;
+                font-weight: bold;
+            }
+
+            span{
+                display: inline-block;
+                text-align: center;
+                padding: 10px;
+
+                a{
+                    text-decoration: none;
+                    color: saddlebrown;
+                }
+
+                a:hover{
+                    font-weight: bold;
+                    color: #41a0a0;
+                }
+            }
+
+        }
     }
 }
