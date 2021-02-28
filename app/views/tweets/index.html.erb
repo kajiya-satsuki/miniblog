@@ -2,8 +2,23 @@
     <div class="contents">
         <% @tweets.each do |tweet| %>
             <div class="contents__post">
-            <h3><%= tweet.title %></h3>
-            <p><%= tweet.text %></p>
+                <div class="contents__post__header">
+                    <div class="contents__post__header__title">
+                        <h3><%= tweet.title %></h3>
+                    </div>
+                    <% if user_signed_in? && current_user.id == tweet.user_id %>
+                        <div class="buttons">
+                            <ul class="fa-ul">
+                                <li>
+                                    <%= link_to "/tweets/#{tweet.id}", method: :delete do %>
+                                        <i class="fas fa-trash-alt"></i>
+                                    <% end %>
+                                </li>
+                            </ul>
+                        </div>
+                    <% end %>
+                </div>
+                <p><%= tweet.text %></p>
             </div>
         <% end %>
         <%= paginate @tweets %>
