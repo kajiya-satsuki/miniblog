@@ -36,10 +36,41 @@
             margin-bottom: 40px;
             background-color: white;
             box-shadow: 0px 0px 8px #41a0a0;
-            
-            h3{
-                color: #41a0a0;
-            }
+
+            &__header{
+                height: 60px;
+                display: flex;
+                justify-content: space-between;
+                list-style-type: none;
+                &__title{
+                    height: 60px;
+                    box-sizing: border-box;
+                    color: #41a0a0;
+                }
+                .buttons{
+                    height: 60px;
+                    display: flex;
+                    box-sizing: border-box;
+                    .fa-ul {
+                        display: inline-flex;
+                        font-weight: bold;
+                        list-style-type: none;
+                        li{
+                            margin-left: 10px;
+                            a {
+                                vertical-align: middle;
+                                text-decoration: none;
+                                color: PaleTurquoise;
+                            }
+                            a:hover {
+                                color: #41a0a0;
+                                font-size: 1.2em;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }  
         }
 
         .pagination{
