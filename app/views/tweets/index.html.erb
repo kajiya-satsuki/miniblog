@@ -10,6 +10,11 @@
                         <div class="buttons">
                             <ul class="fa-ul">
                                 <li>
+                                    <%= link_to "/tweets/#{tweet.id}/edit", method: :get do %>
+                                        <i class="fas fa-edit"></i>
+                                    <% end %>
+                                </li>
+                                <li>
                                     <%= link_to "/tweets/#{tweet.id}", method: :delete do %>
                                         <i class="fas fa-trash-alt"></i>
                                     <% end %>
