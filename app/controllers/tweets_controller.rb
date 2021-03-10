@@ -18,6 +18,16 @@ class TweetsController < ApplicationController
         tweet.destroy if tweet.user_id == current_user.id
         redirect_to :root
     end
+
+    def edit
+        @tweet = Tweet.find(params[:id])
+    end
+
+    def update
+        tweet = Tweet.find(params[:id])
+        tweet.update(tweet_params) if tweet.user_id == current_user.id
+        redirect_to :root
+    end
     
     private
     def tweet_params
