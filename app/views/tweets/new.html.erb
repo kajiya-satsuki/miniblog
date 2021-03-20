@@ -1,9 +1,20 @@
 <div class="wrapper">
     <div class="contents">
         <%= form_for(@tweet) do |f|%>
-            <%= f.text_field :title, placeholder: "Title", value: "" %>
-            <%= f.text_area :text, placeholder: "Text" %>
-            <%= f.submit "Post" %>
+
+            <div class="contents__form">
+                <h3><%= f.label :title, '投稿タイトル' %></h3>
+                <%= f.text_field :title, placeholder: "Title", value: "" %>
+            </div>
+
+            <div class="contents__form">
+                <h3><%= f.label :text, '投稿内容' %></h3>
+                <%= f.text_area :text, placeholder: "Text" %>
+            </div>
+            <div class="contents__form">
+                <%= f.submit "Post" %>
+            </div>
+
         <% end %>
     </div>
 </div>
